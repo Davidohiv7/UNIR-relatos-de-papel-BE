@@ -1,0 +1,14 @@
+services:
+  orders-db:
+    image: mysql:9
+    container_name: relatos-orders-db
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: relatos_orders
+    ports:
+      - "3307:3306"
+    volumes:
+      - orders-db-data:/var/lib/mysql
+
+volumes:
+  orders-db-data:
