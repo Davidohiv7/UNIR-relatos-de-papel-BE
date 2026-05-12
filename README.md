@@ -8,7 +8,7 @@ Back-end de la aplicación **Relatos de Papel** desarrollado con arquitectura de
 
 | Tecnología | Uso |
 |---|---|
-| Java 21 | Lenguaje principal |
+| Java 25 | Lenguaje principal |
 | Spring Boot | Base de cada microservicio |
 | Spring Data JPA | Acceso a base de datos relacional |
 | Spring Cloud Netflix Eureka | Descubrimiento y registro de servicios |
