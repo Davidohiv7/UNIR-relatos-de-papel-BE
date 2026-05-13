@@ -1,12 +1,12 @@
 FROM maven:3.9.12-eclipse-temurin-25 AS build
 WORKDIR /app
 COPY pom.xml .
-RUN mvn dependency:go-offline -q
+RUN mvn dependency:go-offline -B
 COPY src ./src
-RUN mvn clean package -DskipTests -q
+RUN mvn package -DskipTests
 
 FROM eclipse-temurin:25-jre
 WORKDIR /app
-EXPOSE 8762
-COPY --from=build /app/target/gateway-filters-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
+EXPOSE 8761
 ENTRYPOINT ["java", "-jar", "app.jar"]
