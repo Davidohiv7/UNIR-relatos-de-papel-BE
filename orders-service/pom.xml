@@ -24,7 +24,7 @@
 
     <dependencies>
 
-        <!-- Expone los endpoints REST (Spring MVC) -->
+        <!-- Expone los endpoints REST (Spring) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc</artifactId>
